@@ -1,0 +1,82 @@
+/* Typography System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --font-primary: 'Google Sans', 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+    --line-height-body: 1.6;
+    --line-height-heading: 1.2;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: var(--line-height-body);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: var(--line-height-heading);
+    font-weight: 500;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-secondary);
+}
+
+.text-large {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}

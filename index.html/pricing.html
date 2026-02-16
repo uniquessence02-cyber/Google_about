@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Pricing</title>
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .pricing-card {
+            display: flex;
+            flex-direction: column;
+            padding: var(--space-xl);
+            height: 100%;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-l) 0;
+        }
+
+        .feature-list li {
+            margin-bottom: var(--space-s);
+            display: flex;
+            align-items: center;
+            gap: var(--space-s);
+            color: var(--color-text-secondary);
+        }
+
+        .check-icon {
+            color: var(--color-green);
+            font-size: 20px;
+        }
+
+        .highlight-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--color-primary);
+            border-radius: var(--radius-m) var(--radius-m) 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+
+        <!-- Header -->
+        <section class="py-xl text-center animate-on-scroll" data-animation="fade-up">
+            <h1 class="mb-m">Choose the plan that's right for you.</h1>
+            <p class="text-large" style="max-width: 600px; margin: 0 auto;">No hidden fees. Change or cancel anytime.
+            </p>
+        </section>
+
+        <!-- Pricing Tiers -->
+        <section class="grid grid-3 gap-l mb-xl">
+
+            <!-- Starter -->
+            <div class="card pricing-card animate-on-scroll" data-delay="0" data-animation="fade-up">
+                <h3 class="mb-s">Starter</h3>
+                <p class="text-secondary mb-l" style="flex-grow:0; min-height: 3rem;">For hobbies and side projects.</p>
+                <div class="mb-l">
+                    <span class="font-bold" style="font-size: 3.5rem;">$0</span>
+                    <span class="text-secondary">/mo</span>
+                </div>
+                <a href="#" class="btn btn-outline mb-l">Get Started</a>
+
+                <p class="text-small font-bold text-secondary mb-s">INCLUDES:</p>
+                <ul class="feature-list">
+                    <li><span class="material-symbols-outlined check-icon">check</span> 1 Project</li>
+                    <li><span class="material-symbols-outlined check-icon">check</span> Community Support</li>
+                    <li><span class="material-symbols-outlined check-icon">check</span> 5GB Storage</li>
+                </ul>
+            </div>
+
+            <!-- Pro -->
+            <div class="card pricing-card animate-on-scroll" data-delay="100" data-animation="scale-up"
+                style="border-color: rgba(66, 133, 244, 0.3); box-shadow: 0 10px 30px rgba(66, 133, 244, 0.1);">
+                <div class="highlight-bar"></div>
+                <h3 class="mb-s">Pro</h3>
+                <p class="text-secondary mb-l" style="flex-grow:0; min-height: 3rem;">For growing teams and startups.
+                </p>
+                <div class="mb-l">
+                    <span class="font-bold" style="font-size: 3.5rem;">$29</span>
+                    <span class="text-secondary">/mo</span>
+                </div>
+                <a href="#" class="btn btn-primary mb-l">Start Free Trial</a>
+
+                <p class="text-small font-bold text-secondary mb-s">EVERYTHING IN STARTER, PLUS:</p>
+                <ul class="feature-list">
+                    <li><span class="material-symbols-outlined check-icon">check</span> Unlimited Projects</li>
+                    <li><span class="material-symbols-outlined check-icon">check</span> Priority Email Support</li>
+                    <li><span class="material-symbols-outlined check-icon">check</span> 100GB Storage</li>
+                    <li><span class="material-symbols-outlined check-icon">check</span> Advanced Analytics</li>
+                </ul>
+            </div>
+
+            <!-- Enterprise -->
+            <div class="card pricing-card animate-on-scroll" data-delay="200" data-animation="fade-up">
+                <h3 class="mb-s">Enterprise</h3>
+                <p class="text-secondary mb-l" style="flex-grow:0; min-height: 3rem;">For large organizations.</p>
+                <div class="mb-l">
+                    <span class="font-bold" style="font-size: 3.5rem;">Custom</span>
+                </div>
+                <a href="contact.html" class="btn btn-outline mb-l">Contact Sales</a>
+
+                <p class="text-small font-bold text-secondary mb-s">EVERYTHING IN PRO, PLUS:</p>
+                <ul class="feature-list">
+                    <li><span class="material-symbols-outlined check-icon">check</span> SSO & SAML</li>
+                    <li><span class="material-symbols-outlined check-icon">check</span> Dedicated Success Manager</li>
+                    <li><span class="material-symbols-outlined check-icon">check</span> Custom SLAs</li>
+                    <li><span class="material-symbols-outlined check-icon">check</span> Unlimited History</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-xl" style="border-top: 1px solid var(--color-divider);">
+            <h2 class="text-center mb-xl animate-on-scroll">Frequently Asked Questions</h2>
+            <div class="grid grid-2 gap-xl animate-on-scroll" data-animation="fade-up">
+                <div>
+                    <h3 class="text-large font-bold mb-s">Can I cancel anytime?</h3>
+                    <p class="text-secondary">Yes, you can cancel your subscription at any time. Your access will
+                        continue until the end of your billing period.</p>
+                </div>
+                <div>
+                    <h3 class="text-large font-bold mb-s">Do you offer discounts for non-profits?</h3>
+                    <p class="text-secondary">Absolutely. Contact our sales team with proof of your non-profit status
+                        and we'll set you up with a discount.</p>
+                </div>
+                <div>
+                    <h3 class="text-large font-bold mb-s">What payment methods do you accept?</h3>
+                    <p class="text-secondary">We accept all major credit cards, PayPal, and bank transfers for
+                        Enterprise plans.</p>
+                </div>
+                <div>
+                    <h3 class="text-large font-bold mb-s">Is my data secure?</h3>
+                    <p class="text-secondary">Security is our top priority. We use bank-level encryption and strictly
+                        adhere to GDPR and CCPA regulations.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Resources</title>
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-center animate-on-scroll"
+            style="min-height: 50vh; background: radial-gradient(circle at center, #E8F0FE 0%, rgba(255,255,255,0) 70%); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div class="container">
+                <span class="material-symbols-outlined mb-m animate-on-scroll" data-animation="scale-up"
+                    style="font-size: 80px; color: var(--color-primary);">library_books</span>
+                <h1 class="hero-title mb-s" style="font-size: 4rem; line-height: 1.1;">Resources & Insights</h1>
+                <p class="text-large text-secondary mb-xl"
+                    style="max-width: 700px; margin: 0 auto; font-size: 1.25rem;">
+                    Everything you need to build better with Nexus. Explore guides, case studies, and industry trends.
+                </p>
+                <div class="flex gap-s justify-center flex-wrap animate-on-scroll" data-delay="100">
+                    <button class="filter-btn resource-filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn resource-filter-btn" data-filter="engineering">Engineering</button>
+                    <button class="filter-btn resource-filter-btn" data-filter="design">Design</button>
+                    <button class="filter-btn resource-filter-btn" data-filter="case-studies">Case Studies</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-xl">
+            <!-- Featured Case Study -->
+            <div class="card mb-xl animate-on-scroll resource-card" data-category="case-studies"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; padding: 0; overflow: hidden; border: none; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);">
+                <div style="min-height: 400px; position: relative;">
+                    <img src="https://picsum.photos/id/4/800/600" alt="Case Study"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.4), transparent);">
+                    </div>
+                </div>
+                <div
+                    style="padding: var(--space-xl); display: flex; flex-direction: column; justify-content: center; background: white;">
+                    <span class="text-small font-bold mb-s"
+                        style="color: var(--color-primary); text-transform: uppercase; letter-spacing: 1px;">Featured
+                        Case Study</span>
+                    <h2 class="mb-m" style="font-size: 2.5rem; line-height: 1.2;">Scaling to 1 Million Users</h2>
+                    <p class="mb-l text-secondary" style="font-size: 1.1rem; line-height: 1.6;">Discover how ACME Corp
+                        leveraged Nexus Cloud's auto-scaling infrastructure to handle their biggest launch ever with
+                        zero downtime.</p>
+                    <a href="resource-detail.html?id=scaling-1m-users" target="_blank" class="btn btn-primary"
+                        style="align-self: flex-start;">Read Full Story</a>
+                </div>
+            </div>
+
+            <!-- Latest Articles -->
+            <div class="flex justify-between items-end mb-l animate-on-scroll"
+                style="border-bottom: 1px solid var(--color-divider); padding-bottom: var(--space-m);">
+                <h2 class="section-title" style="margin: 0; text-align: left;">Latest Articles</h2>
+                <a href="#" class="btn-text">View All <span class="material-symbols-outlined"
+                        style="font-size: 16px;">arrow_forward</span></a>
+            </div>
+
+            <div class="grid grid-3 gap-l mb-xl">
+                <!-- Article 1 -->
+                <a href="resource-detail.html?id=future-of-security" target="_blank"
+                    class="feature-card animate-on-scroll hover-lift resource-card" data-category="engineering"
+                    data-delay="100"
+                    style="padding: 0; overflow: hidden; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="height: 220px; width: 100%; overflow: hidden;">
+                        <img src="https://picsum.photos/id/60/600/400" alt="Security"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div style="padding: var(--space-l);">
+                        <span class="text-small text-secondary mb-xs display-block">Sep 28, 2026 • Security</span>
+                        <h3 class="mb-s" style="font-size: 1.5rem;">The Future of Enterprise Security</h3>
+                        <p class="text-secondary">Why zero-trust architecture is becoming the new standard for modern
+                            organizations.</p>
+                    </div>
+                </a>
+
+                <!-- Article 2 -->
+                <a href="resource-detail.html?id=remote-workflows" target="_blank"
+                    class="feature-card animate-on-scroll hover-lift resource-card" data-category="design"
+                    data-delay="200"
+                    style="padding: 0; overflow: hidden; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="height: 220px; width: 100%; overflow: hidden;">
+                        <img src="https://picsum.photos/id/180/600/400" alt="Workflow"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div style="padding: var(--space-l);">
+                        <span class="text-small text-secondary mb-xs display-block">Sep 15, 2026 • Productivity</span>
+                        <h3 class="mb-s" style="font-size: 1.5rem;">Mastering Remote Workflows</h3>
+                        <p class="text-secondary">5 essential strategies to keep your distributed team synchronized and
+                            happy.</p>
+                    </div>
+                </a>
+
+                <!-- Article 3 -->
+                <a href="resource-detail.html?id=data-driven" target="_blank"
+                    class="feature-card animate-on-scroll hover-lift resource-card" data-category="case-studies"
+                    data-delay="300"
+                    style="padding: 0; overflow: hidden; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="height: 220px; width: 100%; overflow: hidden;">
+                        <img src="https://picsum.photos/id/20/600/400" alt="Data"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    </div>
+                    <div style="padding: var(--space-l);">
+                        <span class="text-small text-secondary mb-xs display-block">Aug 30, 2026 • Data</span>
+                        <h3 class="mb-s" style="font-size: 1.5rem;">Data-Driven Decision Making</h3>
+                        <p class="text-secondary">How to turn your raw analytics into actionable business intelligence.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Developer Resources -->
+            <h2 class="section-title animate-on-scroll mb-l" style="text-align: left;">For Developers</h2>
+            <div class="grid grid-2 gap-l animate-on-scroll">
+                <a href="#" class="card flex items-center gap-l hover-lift" style="padding: var(--space-l);">
+                    <div style="background: var(--color-surface); padding: var(--space-m); border-radius: 50%;">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 32px; color: var(--color-primary);">code</span>
+                    </div>
+                    <div>
+                        <h3 class="mb-xs">API Documentation</h3>
+                        <p class="text-secondary">Comprehensive guides for our REST and GraphQL APIs.</p>
+                    </div>
+                    <span class="material-symbols-outlined ml-auto"
+                        style="color: var(--color-primary);">arrow_forward</span>
+                </a>
+
+                <a href="#" class="card flex items-center gap-l hover-lift" style="padding: var(--space-l);">
+                    <div style="background: var(--color-surface); padding: var(--space-m); border-radius: 50%;">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 32px; color: var(--color-primary);">school</span>
+                    </div>
+                    <div>
+                        <h3 class="mb-xs">Nexus Academy</h3>
+                        <p class="text-secondary">Interactive courses and certifications to level up your skills.</p>
+                    </div>
+                    <span class="material-symbols-outlined ml-auto"
+                        style="color: var(--color-primary);">arrow_forward</span>
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - About</title>
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .hero-image {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            border-radius: var(--radius-l);
+            margin-bottom: var(--space-xl);
+            display: block;
+        }
+
+        .story-section {
+            padding: var(--space-xxl) 0;
+            border-bottom: 1px solid var(--color-divider);
+        }
+
+        .story-section:last-child {
+            border-bottom: none;
+        }
+
+        .big-stat {
+            font-size: 5rem;
+            line-height: 1;
+            font-weight: 700;
+            display: block;
+            margin-bottom: var(--space-s);
+            letter-spacing: -0.03em;
+        }
+
+        .quote-block {
+            font-size: 2rem;
+            line-height: 1.4;
+            font-weight: 300;
+            text-align: center;
+            max-width: 900px;
+            margin: var(--space-xxl) auto;
+            color: var(--color-text);
+        }
+
+        /* Zig-zag layout helpers */
+        .order-1 {
+            order: 1;
+        }
+
+        .order-2 {
+            order: 2;
+        }
+
+        @media (max-width: 768px) {
+            .big-stat {
+                font-size: 3rem;
+            }
+
+            .quote-block {
+                font-size: 1.5rem;
+            }
+
+            .hero-image {
+                height: 40vh;
+            }
+
+            .order-1,
+            .order-2 {
+                order: unset;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="py-xl flex flex-col items-center text-center animate-on-scroll" data-animation="fade-up">
+            <h1 class="mb-l" style="max-width: 900px; font-size: 4rem;">Our mission is to organize the world's work and
+                make it universally accessible and useful.</h1>
+            <img src="https://picsum.photos/id/48/1200/800" alt="Nexus Campus" class="hero-image animate-on-scroll"
+                data-delay="200" data-animation="scale-up">
+        </section>
+
+        <!-- Quote -->
+        <div class="quote-block animate-on-scroll" data-animation="fade-up">
+            "We believe that technology should be an enabler, not a barrier. Nexus exists to remove the friction between
+            idea and execution."
+        </div>
+
+        <!-- Story 1: The Beginning -->
+        <section class="story-section grid grid-2 gap-xl items-center">
+            <div class="animate-on-scroll" data-animation="slide-right">
+                <span class="text-small font-bold"
+                    style="color: var(--color-primary); text-transform: uppercase; letter-spacing: 1px;">The
+                    Beginning</span>
+                <h2 class="mt-s mb-m">From a dorm room to the global stage.</h2>
+                <p class="text-large mb-m">
+                    Nexus started with a simple question: "Why is collaboration so hard?" What began as a side project
+                    in 2018 has grown into a suite of tools powered by the most advanced AI on the planet.
+                </p>
+                <p class="text-secondary">
+                    We didn't set out to build a company; we set out to solve a problem. That user-centric DNA is still
+                    at the core of everything we do today.
+                </p>
+            </div>
+            <div class="animate-on-scroll" data-animation="fade-in" data-delay="200">
+                <img src="https://picsum.photos/id/60/800/600" alt="Early team working"
+                    style="width: 100%; border-radius: var(--radius-m);">
+            </div>
+        </section>
+
+        <!-- Story 2: Philosophy (Reversed) -->
+        <section class="story-section grid grid-2 gap-xl items-center">
+            <div class="order-2 animate-on-scroll" data-animation="slide-left">
+                <span class="text-small font-bold"
+                    style="color: var(--color-red); text-transform: uppercase; letter-spacing: 1px;">Our
+                    Philosophy</span>
+                <h2 class="mt-s mb-m">Speed is a feature.</h2>
+                <p class="text-large mb-m">
+                    We know your time is valuable. That’s why we obsess over milliseconds. Whether it’s loading a page
+                    or processing a dataset, we optimize for speed so you can move at the speed of thought.
+                </p>
+                <div class="flex gap-m mt-l">
+                    <div>
+                        <span class="font-bold text-large display-block">99.99%</span>
+                        <span class="text-small text-secondary">Uptime</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-large display-block">&lt;50ms</span>
+                        <span class="text-small text-secondary">Global Latency</span>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 animate-on-scroll" data-animation="fade-in" data-delay="200">
+                <img src="https://picsum.photos/id/3/800/600" alt="Server room abstract"
+                    style="width: 100%; border-radius: var(--radius-m);">
+            </div>
+        </section>
+
+        <!-- Story 3: Sustainability -->
+        <section class="story-section grid grid-2 gap-xl items-center">
+            <div class="animate-on-scroll" data-animation="slide-right">
+                <span class="text-small font-bold"
+                    style="color: var(--color-green); text-transform: uppercase; letter-spacing: 1px;">Sustainability</span>
+                <h2 class="mt-s mb-m">Carbon-free by 2030.</h2>
+                <p class="text-large mb-m">
+                    We are committed to operating our business in an environmentally sustainable way. All Nexus data
+                    centers are powered by 100% renewable energy.
+                </p>
+                <a href="#" class="btn-text" style="padding:0;">Read our environmental report <span
+                        class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span></a>
+            </div>
+            <div class="animate-on-scroll" data-animation="fade-in" data-delay="200">
+                <img src="https://picsum.photos/id/28/800/600" alt="Forest"
+                    style="width: 100%; border-radius: var(--radius-m);">
+            </div>
+        </section>
+
+        <!-- Impact / Stats -->
+        <section class="py-xl animate-on-scroll" data-animation="fade-up">
+            <div class="grid grid-3 gap-l text-center">
+                <div>
+                    <span class="big-stat" style="color: var(--color-primary);">100+</span>
+                    <p class="text-large">Cities with Nexus offices</p>
+                </div>
+                <div>
+                    <span class="big-stat" style="color: var(--color-yellow);">150M</span>
+                    <p class="text-large">Active monthly users</p>
+                </div>
+                <div>
+                    <span class="big-stat" style="color: var(--color-red);">$1B+</span>
+                    <p class="text-large">Investment in R&D</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-xl text-center animate-on-scroll"
+            style="background: var(--color-surface); margin: var(--space-xl) 0; border-radius: var(--radius-l);">
+            <h2 class="mb-m">Be part of the story.</h2>
+            <p class="mb-l">We are always looking for curious minds to join us.</p>
+            <a href="careers.html" class="btn btn-primary">See Open Roles</a>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>

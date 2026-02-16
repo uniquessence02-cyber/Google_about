@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Product Detail</title>
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="assets/js/product-data.js"></script>
+    <style>
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.1;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main id="main-content" class="container py-xl" style="min-height: 80vh;">
+        <!-- Content injected by JS -->
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+            const product = productData[productId];
+            const main = document.getElementById('main-content');
+
+            if (!product) {
+                main.innerHTML = `
+                    <div class="text-center py-xl">
+                        <h1>Product not found</h1>
+                        <a href="products.html" class="btn btn-primary mt-m">Back to Products</a>
+                    </div>
+                `;
+                return;
+            }
+
+            document.title = `Nexus - ${product.title}`;
+
+            main.innerHTML = `
+                <!-- Hero Section -->
+                <section class="hero-section animate-on-scroll" style="--highlight-color: ${product.color}20;">
+                    <div class="container flex flex-col items-center">
+                        <div class="feature-icon-box" style="background: ${product.color}15;">
+                            <span class="material-symbols-outlined" style="font-size: 32px; color: ${product.color};">${product.icon}</span>
+                        </div>
+                        <h1 class="hero-title animate-on-scroll" data-delay="100">${product.title}</h1>
+                        <p class="text-large text-secondary mb-l animate-on-scroll" data-delay="200" style="max-width: 700px; font-size: 1.25rem;">${product.tagline}</p>
+                        
+                        <div class="flex gap-m animate-on-scroll" data-delay="300">
+                             <a href="#pricing" class="btn btn-primary" style="background-color: ${product.color}; border-color: ${product.color};">Start Free Trial</a>
+                             <a href="contact.html" class="btn btn-outline" style="color: ${product.color}; border-color: ${product.color}40;">Contact Sales</a>
+                        </div>
+
+                        <div class="hero-image-container animate-on-scroll" data-animation="scale-up" data-delay="400">
+                             <img src="${product.heroImage}" alt="${product.title} Interface" class="hero-image">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Overview Section -->
+                <section class="container py-xl">
+                    <div class="grid grid-2 gap-xl items-center">
+                        <div class="animate-on-scroll" data-animation="slide-right">
+                            <h2 class="section-title" style="text-align: left;">Why consume ${product.title}?</h2>
+                            <p class="text-large text-secondary" style="line-height: 1.8;">${product.description}</p>
+                        </div>
+                        <div class="animate-on-scroll" data-delay="200">
+                            <!-- Placeholder for a secondary image or abstract graphic -->
+                            <div style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--color-surface) 0%, ${product.color}10 100%); border-radius: var(--radius-l); display: flex; align-items: center; justify-content: center;">
+                                <span class="material-symbols-outlined" style="font-size: 120px; color: ${product.color}40;">${product.icon}</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Grid -->
+                <section class="container py-xl" style="background-color: var(--color-surface); border-radius: var(--radius-l);">
+                    <h2 class="section-title animate-on-scroll">Powerful Features</h2>
+                    <div class="feature-grid">
+                        ${product.features.map((feature, index) => `
+                            <div class="feature-card animate-on-scroll" data-delay="${index * 100}" data-animation="fade-up">
+                                <div class="feature-icon-box" style="background: ${product.color}15;">
+                                    <span class="material-symbols-outlined" style="font-size: 28px; color: ${product.color};">verified</span>
+                                </div>
+                                <h3 class="mb-s" style="font-size: 1.25rem;">${feature}</h3>
+                                <p class="text-secondary text-small">Experience seamless ${feature.toLowerCase()} with our advanced engine designed for scale.</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+
+                <!-- Pricing CTA -->
+                <section id="pricing" class="container py-xl">
+                    <div class="pricing-card-detail animate-on-scroll" data-animation="scale-up">
+                        <h2 class="mb-s">Simple Pricing</h2>
+                        <p class="text-secondary mb-l">Start with our transparent pricing model.</p>
+                        
+                        <div class="mb-l">
+                             <span class="font-bold" style="font-size: 4rem; color: ${product.color};">${product.price}</span>
+                             <span class="text-secondary text-large">${product.priceLabel}</span>
+                        </div>
+                        
+                        <ul class="mb-l" style="list-style: none; padding: 0; display: inline-block; text-align: left;">
+                            <li class="flex items-center gap-s mb-s"><span class="material-symbols-outlined" style="color: var(--color-green);">check</span> Unlimited Access</li>
+                            <li class="flex items-center gap-s mb-s"><span class="material-symbols-outlined" style="color: var(--color-green);">check</span> 24/7 Support</li>
+                            <li class="flex items-center gap-s mb-s"><span class="material-symbols-outlined" style="color: var(--color-green);">check</span> 99.9% Uptime</li>
+                        </ul>
+                        <br>
+                        <a href="pricing.html" class="btn btn-primary btn-lg" style="width: 100%; max-width: 300px; background-color: ${product.color}; border-color: ${product.color};">Choose Plan</a>
+                    </div>
+                </section>
+
+            `;
+
+            // Re-trigger animation observer for new content
+            // We need a slight delay or just create a new observer instance if main.js doesn't handle dynamic content
+            // Since animations.js runs on DOMContentLoaded, we might need to manually trigger it here or wait.
+            // A simple hack is to re-run the logic from animations.js or expose a function.
+            // For now, let's just re-add the observer logic inline for simplicity since it's small.
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            main.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

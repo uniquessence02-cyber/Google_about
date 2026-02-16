@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Resource Detail</title>
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="assets/js/resource-data.js"></script>
+    <style>
+        .article-content {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+
+        .article-content p {
+            margin-bottom: 2rem;
+        }
+
+        .article-content h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-text);
+        }
+
+        .author-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding-left: var(--space-s);
+                padding-right: var(--space-s);
+            }
+
+            .article-content {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .article-content h2 {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            #res-title {
+                font-size: 2rem !important;
+                /* Smaller for mobile */
+            }
+
+            #res-subtitle {
+                font-size: 1.1rem !important;
+            }
+
+            #res-category {
+                margin-bottom: var(--space-s) !important;
+            }
+
+            #resource-content {
+                padding-bottom: 4rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main id="resource-content" style="padding-bottom: 8rem;">
+        <!-- Dynamic Content will be injected here -->
+
+        <!-- Header / Hero -->
+        <article>
+            <div class="container py-xl text-center" style="max-width: 900px;">
+                <span id="res-category" class="role-tag mb-m animate-on-scroll">Category</span>
+                <h1 id="res-title" class="mb-m animate-on-scroll" data-delay="100">Loading...</h1>
+                <p id="res-subtitle" class="text-large text-secondary mb-l animate-on-scroll" data-delay="200"
+                    style="font-size: 1.5rem;">...</p>
+
+                <div class="flex items-center justify-center gap-m mb-xl animate-on-scroll" data-delay="300">
+                    <img id="res-author-img" src="" alt="Author" class="author-img">
+                    <div class="text-left">
+                        <p id="res-author-name" class="font-bold" style="margin: 0;">...</p>
+                        <span id="res-date" class="text-small text-secondary">...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wide Image -->
+            <div class="container mb-xl animate-on-scroll" data-delay="400" data-animation="scale-up">
+                <img id="res-hero" src="" alt="Hero Image"
+                    style="width: 100%; height: auto; max-height: 600px; object-fit: cover; border-radius: var(--radius-m);">
+            </div>
+
+            <!-- Content Body -->
+            <div class="container animate-on-scroll" style="max-width: 720px;">
+                <div id="res-body" class="article-content">
+                    <!-- HTML content injects here -->
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid var(--color-divider); margin: var(--space-xl) 0;">
+
+                <div class="flex justify-between items-center">
+                    <a href="resources.html" class="btn btn-outline" style="border-radius: var(--radius-pill);">
+                        <span class="material-symbols-outlined" style="margin-right: 8px;">arrow_back</span>
+                        Back to Resources
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>
